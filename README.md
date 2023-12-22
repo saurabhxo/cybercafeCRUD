@@ -20,7 +20,12 @@ A comprehensive web service for managing a cyber cafe, facilitating user registr
 
 𝐑𝐞𝐩𝐨𝐬𝐢𝐭𝐨𝐫𝐲 𝐈𝐧𝐟𝐨:-
 
+This is the structure of working directory.
+
 <img width="242" alt="Screenshot 2023-12-22 223556" src="https://github.com/saurabhxo/cybercafeCRUD/assets/56174993/0ef08421-01a6-4412-a87e-1ade8d6eaf1f">
+
+I am starting with controller:-
+1.ComputerController
 
 
 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬 𝐔𝐬𝐞𝐝
