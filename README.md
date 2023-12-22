@@ -18,6 +18,10 @@ A comprehensive web service for managing a cyber cafe, facilitating user registr
 <img width="571" alt="Screenshot 2023-12-22 222511" src="https://github.com/saurabhxo/cybercafeCRUD/assets/56174993/66e9e473-2bf4-44d7-8c14-ceeac74c9256">
 
 
+𝐑𝐞𝐩𝐨𝐬𝐢𝐭𝐨𝐫𝐲 𝐈𝐧𝐟𝐨:-
+
+<img width="242" alt="Screenshot 2023-12-22 223556" src="https://github.com/saurabhxo/cybercafeCRUD/assets/56174993/0ef08421-01a6-4412-a87e-1ade8d6eaf1f">
+
 
 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬 𝐔𝐬𝐞𝐝
 
