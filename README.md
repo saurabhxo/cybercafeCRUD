@@ -139,3 +139,19 @@ The application will be accessible at http://localhost:8080.
 
 Use tools like Postman to interact with the APIs.
 
+1. assignUser Endpoint:
+Request Type: POST
+URL: http://localhost:8080/usersWithComputer/assign
+Body (form-data):
+Key: userId, Value: 1 (or the desired user ID)
+
+2. unAssignUser Endpoint:
+Request Type: POST
+URL: http://localhost:8080/usersWithComputer/unassign
+Body (form-data):
+Key: userId, Value: 1 (or the desired user ID)
+
+3. getAllUsersWithComputers Endpoint:
+Request Type: GET
+URL: http://localhost:8080/usersWithComputer/getAll
+
