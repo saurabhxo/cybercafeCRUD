@@ -17,6 +17,17 @@ A comprehensive web service for managing a cyber cafe, facilitating user registr
 
 <img width="571" alt="Screenshot 2023-12-22 222511" src="https://github.com/saurabhxo/cybercafeCRUD/assets/56174993/66e9e473-2bf4-44d7-8c14-ceeac74c9256">
 
+𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬 𝐔𝐬𝐞𝐝
+
+-> Java
+
+-> Spring Boot
+
+-> Hibernate (JPA)
+
+-> RESTful APIs
+
+-> MySQL
 
 𝐃𝐢𝐫𝐞𝐜𝐭𝐨𝐫𝐲 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 𝐈𝐧𝐟𝐨:-
 
@@ -66,37 +77,6 @@ The UserRepository is a Spring Data JPA interface extending JpaRepository for th
 𝐝𝐢𝐫𝐞𝐜𝐭𝐨𝐫𝐲 𝐬𝐫𝐜/𝐦𝐚𝐢𝐧/𝐫𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬/𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧.𝐩𝐫𝐨𝐩𝐞𝐫𝐭𝐢𝐞𝐬:-
 In this directory database related authentication are there you can configure it by providing your DBname and username, password of your DB.
 
-𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬 𝐔𝐬𝐞𝐝
-
--> Java
-
--> Spring Boot
-
--> Hibernate (JPA)
-
--> RESTful APIs
-
--> MySQL
-
-𝐆𝐞𝐭𝐭𝐢𝐧𝐠 𝐒𝐭𝐚𝐫𝐭𝐞𝐝
-
--> Clone the Repository using below command:
-
-git clone https://github.com/saurabhxo/cybercafeCRUD.git
-
-->Database Configuration:
-
-Configure your database details in "application.properties".
-
-Build and Run:
-
-./mvnw clean install
-
-./mvnw spring-boot:run
-
-
-The application will be accessible at http://localhost:8080.
-
 
 𝐀𝐏𝐈 𝐄𝐧𝐝𝐩𝐨𝐢𝐧𝐭𝐬:
 
@@ -134,7 +114,24 @@ The application will be accessible at http://localhost:8080.
 
       iii)curl -X GET http://your-api-url.com/usersWithComputer/getAll
       
-      
+𝐆𝐞𝐭𝐭𝐢𝐧𝐠 𝐒𝐭𝐚𝐫𝐭𝐞𝐝
+
+-> Clone the Repository using below command:
+
+git clone https://github.com/saurabhxo/cybercafeCRUD.git
+
+->Database Configuration:
+
+Configure your database details in "application.properties".
+
+Build and Run:
+
+./mvnw clean install
+
+./mvnw spring-boot:run
+
+
+The application will be accessible at http://localhost:8080.
 
 𝐒𝐚𝐦𝐩𝐥𝐞 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐬:
 
