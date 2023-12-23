@@ -38,43 +38,45 @@ This is the structure of working directory.
 I am start explaining with controller:-
 So, in controller directory we have 4 classes.
 
-1.ComputerController:-
+𝟭.𝗖𝗼𝗺𝗽𝘂𝘁𝗲𝗿𝗖𝗼𝗻𝘁𝗿𝗼𝗹𝗹𝗲𝗿:-
 
 It includes endpoints for creating a new computer (/create) and retrieving all computers (/getAll) by utilizing the corresponding methods from the ComputerRepository. The controller interacts with a Spring Data JPA repository to perform database operations for computer entities.
 
-2.UserController:-
+𝟮.𝗨𝘀𝗲𝗿𝗖𝗼𝗻𝘁𝗿𝗼𝗹𝗹𝗲𝗿:-
 
 It includes endpoints for creating a new user (/create) and retrieving all users (/getAll) by utilizing the corresponding methods from the UserRepository. The controller interacts with a Spring Data JPA repository to perform database operations for user entities.
 
-3.UserWithComputerController:-
+𝟯.𝗨𝘀𝗲𝗿𝗪𝗶𝘁𝗵𝗖𝗼𝗺𝗽𝘂𝘁𝗲𝗿𝗖𝗼𝗻𝘁𝗿𝗼𝗹𝗹𝗲𝗿:-
 
 The UserWithComputerController class is a Spring Boot RESTful controller managing user-computer assignments. It provides endpoints for assigning a free computer to a user (/assign), unassigning a computer from a user (/unassign), and retrieving a list of all users with their assigned computers (/getAll). The controller interacts with UserRepository and ComputerRepository to handle user and computer entities, ensuring proper assignment status updates in the database.
 
-4.UserWithComputerResponse.
+𝟰.𝗨𝘀𝗲𝗿𝗪𝗶𝘁𝗵𝗖𝗼𝗺𝗽𝘂𝘁𝗲𝗿𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲.
 
 The UserWithComputerResponse class represents a response object containing a User and an optional Computer associated with the user, facilitating the representation of user-computer relationships in the context of the UserWithComputerController.
 
 Now We have two model:-
 
-1.User:-
+𝟭.𝗨𝘀𝗲𝗿 𝗠𝗼𝗱𝗲𝗹:-
 
 The User model class represents a user entity with attributes such as userId, userName, emailId, and phoneNumber. It is annotated for JPA persistence, includes a bidirectional relationship with the Computer entity through the assignedComputerId, and incorporates annotations for JSON serialization control. The class also provides constructors, getters, setters, and a toString method for convenient object manipulation and representation.
 
-2.Computer:-
+𝟮.𝗖𝗼𝗺𝗽𝘂𝘁𝗲𝗿 𝗠𝗼𝗱𝗲𝗹:-
 
 The Computer model class represents a computer entity with attributes such as computerId, modelName, ram, and hardDisk. It is annotated for JPA persistence, includes fields for computer status, and utilizes JSON serialization annotations for control. The class provides constructors, getters, setters, and a toString method for convenient object manipulation and representation. Additionally, the default constructor initializes the computerStatus to "Free" by default.
 
 We have two Repository:-
 
-1.ComputerRespositoru:
+𝟭.𝗖𝗼𝗺𝗽𝘂𝘁𝗲𝗿𝗥𝗲𝘀𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆:
 
 The ComputerRepository is a Spring Data JPA interface extending JpaRepository for the Computer entity, providing standard CRUD operations and a custom query method (findByComputerStatus) to retrieve a list of computers based on their status.
 
-2. UserRepository:-
+𝟮. 𝗨𝘀𝗲𝗿𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆:-
 
 The UserRepository is a Spring Data JPA interface extending JpaRepository for the User entity, providing standard CRUD operations for user data in the underlying database.
 
+*🅽🅾🆃🅴:-
 𝐝𝐢𝐫𝐞𝐜𝐭𝐨𝐫𝐲 𝐬𝐫𝐜/𝐦𝐚𝐢𝐧/𝐫𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬/𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧.𝐩𝐫𝐨𝐩𝐞𝐫𝐭𝐢𝐞𝐬:-
+
 In this directory database related authentication are there you can configure it by providing your DBname and username, password of your DB.
 
 
