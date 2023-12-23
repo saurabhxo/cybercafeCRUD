@@ -149,7 +149,7 @@ Body (form-data):
 Key: userId, Value: 1 (or the desired user ID)
 
 
-3. unAssignUser Endpoint:
+2. unAssignUser Endpoint:
    
 Request Type: POST
 
@@ -160,7 +160,7 @@ Body (form-data):
 Key: userId, Value: 1 (or the desired user ID)
 
 
-5. getAllUsersWithComputers Endpoint:
+3. getAllUsersWithComputers Endpoint:
    
 Request Type: GET
 
