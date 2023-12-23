@@ -102,9 +102,39 @@ The application will be accessible at http://localhost:8080.
 
 1.User-related APIs: "/users".
 
+    Creating new user:-
+    
+    i) curl -X GET http://localhost:8080/users/create
+
+    Retriving All the users.
+    
+    ii) curl -X GET http://localhost:8080/users/getAll
+
 2.Computer-related APIs: "/computers".
 
+    Creating new computer:-
+    
+    i) curl -X GET http://localhost:8080/computers/create
+
+    Retriving All the computers.
+    
+    ii) curl -X GET http://localhost:8080/computers/getAll
+
 3.User with Computer Assignment APIs: "/usersWithComputer".
+
+      AssignUser Endpoint:
+      
+      i)curl -X POST http://localhost:8080/usersWithComputer/assign -d "userId=1"
+
+      unAssignUser Endpoint:
+
+      ii)curl -X POST http://localhost:8080/usersWithComputer/unassign -d "userId=1"
+
+      getAllUsersWithComputers Endpoint:
+
+      iii)curl -X GET http://your-api-url.com/usersWithComputer/getAll
+      
+      
 
 𝐒𝐚𝐦𝐩𝐥𝐞 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐬:
 
