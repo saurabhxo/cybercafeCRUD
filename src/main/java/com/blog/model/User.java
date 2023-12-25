@@ -32,7 +32,7 @@ public class User {
 
     @Column(name = "assign_computer_id")
     @JsonIgnore
-    private Long assignedComputerId = 0L;
+    private Long assignedComputerId;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     public Long getAssignedComputerId() {
@@ -85,6 +85,7 @@ public class User {
 
     public User() {
         // Default constructor
+    	assignedComputerId=0L;
     }
 
     @Override

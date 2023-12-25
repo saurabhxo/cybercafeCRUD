@@ -23,27 +23,33 @@ public class UserWithComputerController {
     ComputerRepository computerRepository;
 
 
+    private final Object lock = new Object();
+
     @PostMapping("/assign")
     public ResponseEntity<?> assignUser(@RequestParam Long userId) {
-        Optional<User> byId = userRepository.findById(userId);
-        if(!byId.isPresent()) {
-            return ResponseEntity.ok("User Details Not Matched With Database");
-        }
-        User userValue = byId.get();
-        if(userValue.getAssignedComputerId() == 0) {
-            List<Computer> listComputer = computerRepository.findByComputerStatus("Free");
-            if (!listComputer.isEmpty()) {
-                userValue.setAssignedComputerId(listComputer.get(0).getComputerId());
-                Computer computer = listComputer.get(0);
-//            Computer computer = computerRepository.findById(listComputer.get(0).getComputerId());
-                computer.setComputerStatus("Reserved");
-                computerRepository.save(computer);
-                return ResponseEntity.ok("Computer Assigned");
+        synchronized (lock) {
+            Optional<User> byId = userRepository.findById(userId);
+            if (!byId.isPresent()) {
+                return ResponseEntity.ok("User Details Not Matched With Database");
             }
-            return ResponseEntity.ok("All Computers Are Busy");
+
+            User userValue = byId.get();
+            if (userValue.getAssignedComputerId() == 0) {
+                List<Computer> listComputer = computerRepository.findByComputerStatus("Free");
+                if (!listComputer.isEmpty()) {
+                    userValue.setAssignedComputerId(listComputer.get(0).getComputerId());
+                    Computer computer = listComputer.get(0);
+                    computer.setComputerStatus("Reserved");
+                    computerRepository.save(computer);
+                    return ResponseEntity.ok("Computer Assigned");
+                }
+                return ResponseEntity.ok("All Computers Are Busy");
+            }
+
+            return ResponseEntity.ok("Already Assigned a Computer");
         }
-        return ResponseEntity.ok("Al Ready Assign Computer");
     }
+
 
     @PostMapping("/unassign")
     public ResponseEntity<?> unAssignUser(@RequestParam Long userId) {

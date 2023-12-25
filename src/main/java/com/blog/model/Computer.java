@@ -29,9 +29,9 @@ public class Computer {
 
     @Column(name = "computer_status")
     @JsonIgnore
-    private String computerStatus = "Free";
+    private String computerStatus;
 
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
     public String getComputerStatus() {
         return computerStatus;
     }
